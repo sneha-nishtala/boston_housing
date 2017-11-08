@@ -13849,7 +13849,7 @@ H1TZ/ivgN+7+f8Mjx68ysw/r+fYzgTeAL4BtQEI9+6mQb2YlQGvgfUIToOLu283sZ8C74YA9A9wP
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong> General cross validation involves dividing the data into training and testing sets at a particular ratio. However, in this method, some of the data is being lost from the training set which can have potential information to train the model. Therefore, we first divide the whole data into training and testing set. Then, in grid fold search, for each combination of the hyperparameters, we divide the training data into training and testing data k times either sequentially or randomly and train the model each time. Then we cross validate the model and we get multiple F1 scores. We take the mean of all the F1 scores which will be the F1 score for this particulat hyperparameters combination. k here can be any integer.</p>
-<p>The data traditionally splits sequntially but with the parameter shuffle=TRUE, the data can be split randomly. This is advised since it frees the splits for any kind of bias.</p>
+<p>The data traditionally splits sequntially but with the parameter shuffle=TRUE, the data can be split randomly. This is advised since it frees the data from any kind of bias.</p>
 <p>In grid seach, we are using different parameters to pick the right model using a percentage of data as training and the rest as testing. This way, some data can be missed from the training set and hence might cause underfitting or overfitting of the data.
 Adding k-fold cross validation to each parameter combination can help alleviate this. This would give us an unbiased performace estimate as otherwise we might risk the possibility of generating wrong conclusions.</p>
 
